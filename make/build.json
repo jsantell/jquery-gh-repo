@@ -1,0 +1,8 @@
+{
+  "JAVASCRIPT" : {
+    "DIST_DIR" : "./",
+    "jquery.ghRepo" : [
+      "src/jquery.ghRepo.js"
+    ]
+  }
+}
