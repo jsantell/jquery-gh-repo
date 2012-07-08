@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery GH Repo</title>
+		<style>
+			body {
+				font-family: Arial;
+				margin-left: 200px;
+				color: #333;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h2>Search for parent anchor for repo</h2>
+			<a href="http://github.com/jsantell/jquery-gh-repo">
+				<div class="watchers">watchers: </div>
+			</a>
+		</div>
+		<div>
+			<h2>Use own anchor for repo</h2>
+			<a href="http://github.com/jsantell/jquery-gh-repo" class="watchers">watchers: </a>
+		</div>
+		<div>
+			<h2>Use [data-gh-repo] for repo</h2>
+			<a href="#" class="forks" data-gh-repo="http://github.com/jsantell/jquery-gh-repo">forks: </a>
+		</div>
+		
+		<div>
+			<h2>Use jQuery options for repo</h2>
+			<a href="#" class="explicit">forks: </a>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="jquery.ghRepo.js"></script>
+		<script>
+		$(function () {
+			$('.watchers').ghRepo({
+				data : 'watchers'
+			});
+			$('.forks').ghRepo({
+				data : 'forks'
+			});
+			$('.explicit').ghRepo({
+				data : 'forks',
+				repo : 'http://github.com/jsantell/jquery-gh-repo'
+			});
+		});
+		</script>
+	</body>
+</html>
